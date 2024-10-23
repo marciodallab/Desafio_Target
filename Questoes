@@ -1,0 +1,56 @@
+1) def fibonacci_generator():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+def check_fibonacci(n):
+    for fib in fibonacci_generator():
+        if fib == n:
+            return True
+        if fib > n:
+            return False
+
+numero = int(input("Informe um número: "))
+if check_fibonacci(numero):
+    print(f"O número {numero} pertence à sequência de Fibonacci.")
+else:
+    print(f"O número {numero} não pertence à sequência de Fibonacci.")
+
+
+2) def contar_letra_a(string):
+
+       string_lower = string.lower()
+
+       quantidade_a = string_lower.count('a')
+
+        if quantidade_a > 0:
+        return f"A letra 'a' aparece {quantidade_a} vez(es) na string."
+    else:
+        return "A letra 'a' não está presente na string."
+
+texto = input("Informe uma string: ")
+resultado = contar_letra_a(texto)
+print(resultado)
+
+
+3) ????
+
+
+
+4)
+a) 1, 3, 5, 7, 9.
+b) 2, 4, 8, 16, 32, 64.
+c) 0, 1, 4, 9, 16, 25, 36, 49.
+d) 4, 16, 36, 64, 100.
+e) 1, 1, 2, 3, 5, 8, 13.
+f) 2, 10, 12, 16, 17, 18, 19, 20.
+
+
+
+5) Ligo o primeiro interruptor (A) e o deixar ligado por 5 minutos. Depois desligo o interruptor A.
+Em seguida, ligo o segundo interruptor (B) e deixo-o ligado. 
+Vou até a sala onde estão as lâmpadas e verifico:
+A lâmpada que estiver acesa é controlada pelo Interruptor B.
+A lâmpada que estiver apagada e estiver quente ao tocar, é controlada pelo Interruptor A.
+A lâmpada que estiver apagada e fria é controlada pelo Interruptor C.
